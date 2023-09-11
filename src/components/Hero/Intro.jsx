@@ -5,7 +5,7 @@ import { useGetHomeDetailsQuery } from "../../Api/api";
 import { useGetSocialMediaQuery } from "../../Api/api";
 
 const Intro = () => {
-  const { data: conta } = useGetSocialMediaQuery();
+  const { data: conta, isFetching } = useGetSocialMediaQuery();
 
   const { data: homeData, isFetching } = useGetHomeDetailsQuery();
   const [homeDetails, setHomeDetails] = useState(homeData);
